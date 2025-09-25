@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voizag Integration Hub – APIs, SDKs & Developer Resources</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2' y='2' width='28' height='28' rx='8' fill='%232563EB'/%3E%3Ctext x='16' y='20' font-family='Inter' font-size='12' font-weight='700' text-anchor='middle' fill='white'%3EVG%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section class="relative overflow-hidden pb-20 pt-14 sm:pt-20">
+      <div class="absolute left-0 top-12 -z-10 h-72 w-72 rounded-full bg-indigo-100 blur-3xl"></div>
+      <div class="absolute right-0 top-24 -z-10 h-64 w-64 rounded-full bg-blue-100 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:px-8">
+        <div class="space-y-6 fade-up">
+          <span class="badge">Integration hub</span>
+          <h1 class="text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Build with Voizag’s APIs, SDKs, and event-driven automation in days—not months.
+          </h1>
+          <p class="max-w-2xl text-lg text-slate-600 lg:text-xl">
+            Ship compliant customer journeys using secure APIs, webhooks, and low-code connectors backed by real-time observability and sandbox environments.
+          </p>
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a href="#docs" class="btn-primary">Open documentation</a>
+            <a href="https://voizag.com/SMS_bot/login" class="btn-ghost">Launch developer console</a>
+          </div>
+          <div class="flex flex-wrap gap-3 text-xs text-slate-500">
+            <span class="rounded-full bg-slate-100 px-3 py-1">REST & GraphQL APIs</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1">SDKs for JS, Python, PHP, Java</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1">Global webhooks & streaming</span>
+          </div>
+        </div>
+        <div class="glass-card fade-up fade-delay-1">
+          <div class="code-block" aria-label="Voizag API code example">
+            <span class="code-comment">// Send an OTP with policy-aware routing</span>
+            <br />
+            <span class="code-key">import</span> { <span class="code-func">VoizagClient</span> } <span class="code-key">from</span> <span class="code-string">'@voizag/sdk'</span>;
+            <br /><br />
+            <span class="code-key">const</span> client = <span class="code-key">new</span> <span class="code-func">VoizagClient</span>({
+            <br />&nbsp;&nbsp;apiKey: <span class="code-string">process.env.VOIZAG_KEY</span>,
+            <br />&nbsp;&nbsp;region: <span class="code-string">'us-east'</span>,
+            <br />});
+            <br /><br />
+            <span class="code-key">await</span> client.messages.send({
+            <br />&nbsp;&nbsp;to: <span class="code-string">'+1-555-0101'</span>,
+            <br />&nbsp;&nbsp;channel: <span class="code-string">'sms'</span>,
+            <br />&nbsp;&nbsp;template: <span class="code-string">'otp_login'</span>,
+            <br />&nbsp;&nbsp;metadata: {
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;policyTag: <span class="code-string">'banking_otp'</span>,
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;sessionId: <span class="code-string">'a4b1c2'</span>,
+            <br />&nbsp;&nbsp;},
+            <br />});
+          </div>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2 text-sm text-slate-600">
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4">
+              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Latency</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900">&lt;120ms</p>
+              <p>99th percentile message send latency.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4">
+              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">SDK installs</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900">180K+</p>
+              <p>Developers integrating with Voizag.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <span class="badge">Documentation</span>
+          <h2 class="section-heading mt-4">Pick the path that matches your stack.</h2>
+          <p class="section-subtitle mt-3">Detailed guides, Postman collections, and SDK references make integration straightforward.</p>
+        </div>
+        <a href="https://voizag.com/docs" class="btn-secondary">Browse full docs</a>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <article class="feature-card fade-up">
+          <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600">API</div>
+          <h3 class="text-xl font-semibold text-slate-900">REST & GraphQL</h3>
+          <p class="text-sm text-slate-600">Send messages, manage templates, handle routing policies, and query analytics with a consistent schema.</p>
+          <a href="https://voizag.com/docs/api" class="text-sm font-semibold text-blue-600">View API reference →</a>
+        </article>
+        <article class="feature-card fade-up fade-delay-1">
+          <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">SDK</div>
+          <h3 class="text-xl font-semibold text-slate-900">Language SDKs</h3>
+          <p class="text-sm text-slate-600">Native clients for JavaScript, Python, PHP, and Java with retries, telemetry, and type-safe models.</p>
+          <a href="https://voizag.com/docs/sdk" class="text-sm font-semibold text-blue-600">Install packages →</a>
+        </article>
+        <article class="feature-card fade-up fade-delay-2">
+          <div class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-amber-600">WH</div>
+          <h3 class="text-xl font-semibold text-slate-900">Webhooks & events</h3>
+          <p class="text-sm text-slate-600">Receive granular delivery receipts, compliance alerts, and customer events in real time.</p>
+          <a href="https://voizag.com/docs/events" class="text-sm font-semibold text-blue-600">Configure webhooks →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
+        <div class="glass-card h-full">
+          <span class="badge">Integration flow</span>
+          <h3 class="text-2xl font-semibold text-slate-900">From sandbox to production in four steps.</h3>
+          <ol class="mt-6 space-y-4 text-sm text-slate-600">
+            <li><span class="font-semibold text-slate-900">1. Provision sandbox:</span> spin up an environment with sample data and simulated carriers.</li>
+            <li><span class="font-semibold text-slate-900">2. Configure compliance:</span> connect DLT, 10DLC, KYC, and brand registries from the console.</li>
+            <li><span class="font-semibold text-slate-900">3. Integrate APIs:</span> add SDKs, set up webhooks, and validate flows with replay tools.</li>
+            <li><span class="font-semibold text-slate-900">4. Launch:</span> promote to production with change approvals, alerting, and monitoring in place.</li>
+          </ol>
+          <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600">
+            <p class="font-semibold text-slate-900">Need help?</p>
+            <p>Our solutions engineers pair-program, design architecture, and review code before you go live.</p>
+            <a href="contact.html" class="mt-3 inline-flex items-center text-blue-600">Book a technical session →</a>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-xl">
+          <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Tooling</p>
+          <h3 class="mt-3 text-2xl font-bold text-slate-900">Developer toolkit</h3>
+          <ul class="mt-5 space-y-4 text-sm text-slate-600">
+            <li><span class="font-semibold text-slate-900">CLI:</span> Manage credentials, send test traffic, and inspect logs locally.</li>
+            <li><span class="font-semibold text-slate-900">Postman collection:</span> Ready-to-run requests for all endpoints.</li>
+            <li><span class="font-semibold text-slate-900">Terraform provider:</span> Automate configuration and route management as code.</li>
+            <li><span class="font-semibold text-slate-900">Status hooks:</span> Subscribe to status page updates via API.</li>
+          </ul>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 text-sm text-slate-600">
+            <a href="https://voizag.com/docs/postman" class="rounded-2xl border border-blue-200 bg-blue-50/80 p-4 text-center font-semibold text-blue-700">Download Postman</a>
+            <a href="https://voizag.com/docs/terraform" class="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4 text-center font-semibold text-emerald-700">Get Terraform provider</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-slate-200 bg-white/80 p-10 shadow-xl">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span class="badge">Platforms</span>
+            <h3 class="section-heading mt-4">Pre-built connectors for your ecosystem.</h3>
+            <p class="section-subtitle mt-3">Plug Voizag into CRMs, automation tools, and customer support software without writing code.</p>
+          </div>
+          <a href="b2b.html" class="btn-secondary">Explore partner program</a>
+        </div>
+        <div class="mt-10 grid gap-6 text-sm text-slate-600 md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="font-semibold text-slate-900">CRM & support</p>
+            <p>Salesforce, HubSpot, Zendesk, Freshdesk, Zoho.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="font-semibold text-slate-900">Automation</p>
+            <p>Zapier, n8n, Workato, Segment, Braze, Adobe Journey Optimizer.</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <p class="font-semibold text-slate-900">Data & observability</p>
+            <p>Snowflake, Databricks, Power BI, Looker, Grafana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-24 max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-slate-200 bg-white/80 p-10 shadow-xl">
+        <h3 class="text-2xl font-bold text-slate-900">Developer success stories</h3>
+        <div class="mt-6 grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
+          <div class="space-y-4 text-sm text-slate-600">
+            <p class="text-lg font-semibold text-slate-900">“The console gives our engineers observability we never had before.”</p>
+            <p>A mobility marketplace integrated Voizag in three weeks, replacing legacy SMS providers across 15 countries.</p>
+            <ul class="space-y-3">
+              <li>• Terraform-managed provisioning across sandbox and production.</li>
+              <li>• Automatic failover and latency-based routing via policy engine.</li>
+              <li>• Real-time webhook retries and event replays.</li>
+            </ul>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">ENGINEERING MANAGER · GLOBAL MOBILITY PLATFORM</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm">
+              <p class="text-2xl font-black text-slate-900">3 wks</p>
+              <p class="text-xs uppercase tracking-wide text-slate-500">Integration time</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm">
+              <p class="text-2xl font-black text-slate-900">0</p>
+              <p class="text-xs uppercase tracking-wide text-slate-500">Critical incidents post-migration</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm sm:col-span-2">
+              <p class="text-2xl font-black text-slate-900">99.999%</p>
+              <p class="text-xs uppercase tracking-wide text-slate-500">Uptime delivered</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-24 max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="glass-card text-center">
+        <span class="badge">Start building</span>
+        <h2 class="section-heading mt-4">Ready to go live?</h2>
+        <p class="section-subtitle mx-auto mt-3">Spin up your sandbox, sync with our engineers, and ship your first campaign with confidence.</p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <a href="https://voizag.com/SMS_bot/login" class="btn-primary">Launch developer console</a>
+          <a href="contact.html" class="btn-ghost">Talk to a solutions engineer</a>
+        </div>
+        <p class="mt-4 text-xs text-slate-500">Prefer async support? Email <a href="mailto:devrel@voizag.com" class="font-semibold text-slate-700 underline">devrel@voizag.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="components.js"></script>
+</body>
+</html>
