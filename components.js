@@ -185,9 +185,11 @@ class ComponentLoader {
           toggle.setAttribute('aria-expanded', String(!expanded));
 
           if (expanded) {
+            dropdown.classList.remove('is-open');
             panel.style.maxHeight = '0';
             setTimeout(() => panel.classList.add('hidden'), 300);
           } else {
+            dropdown.classList.add('is-open');
             panel.classList.remove('hidden');
             panel.style.maxHeight = panel.scrollHeight + 'px';
           }
