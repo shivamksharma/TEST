@@ -13,182 +13,513 @@
   <div id="navbar"></div>
 
   <main>
-    <section class="relative overflow-hidden pb-20 pt-14 sm:pt-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      <div class="absolute left-0 top-10 -z-10 h-72 w-72 rounded-full bg-blue-200 blur-3xl animate-pulse"></div>
-      <div class="absolute right-0 top-24 -z-10 h-64 w-64 rounded-full bg-indigo-200 blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-0 left-1/2 -z-10 h-48 w-48 rounded-full bg-emerald-100 blur-3xl animate-pulse"></div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center space-y-8 fade-up">
-          <span class="badge">Media Room</span>
-          <h1 class="text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Voizag Media Room – News, Press Releases & Brand Assets
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="text-center">
+          <div class="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 mb-8">
+            <span class="relative flex h-2 w-2 mr-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Media Center
+          </div>
+          <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
+            Stories that <span class="text-blue-600">matter</span>
           </h1>
-          <p class="max-w-3xl mx-auto text-lg text-slate-600 lg:text-xl">
-            Access the latest news, press releases, brand assets, and connect with our communications team for your next feature or story.
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Discover our latest announcements, thought leadership, and media coverage. Get the resources you need to tell our story.
           </p>
-          <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <a href="#kit" class="btn-primary">Download Media Kit</a>
-            <a href="mailto:press@voizag.com" class="btn-ghost">Contact Press Office</a>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#news" class="rounded-md bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors">
+              Latest News
+            </a>
+            <a href="#assets" class="text-base font-semibold leading-6 text-slate-900 hover:text-blue-600 transition-colors">
+              Media Kit <span aria-hidden="true">→</span>
+            </a>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
-            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm">
-              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Outlets</p>
-              <p class="mt-2 text-2xl font-bold text-slate-900">120+</p>
-              <p class="text-xs text-slate-500">Featured in</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm">
-              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Response Time</p>
-              <p class="mt-2 text-2xl font-bold text-slate-900">&lt;2 hrs</p>
-              <p class="text-xs text-slate-500">Press inquiries</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm">
-              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Events</p>
-              <p class="mt-2 text-2xl font-bold text-slate-900">Annual</p>
-              <p class="text-xs text-slate-500">Voizag Connect</p>
-            </div>
+        </div>
+        <div class="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-slate-900">120+</div>
+            <div class="mt-2 text-sm text-slate-600">Media outlets covered</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-slate-900">&lt;2hrs</div>
+            <div class="mt-2 text-sm text-slate-600">Average response time</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-slate-900">45B+</div>
+            <div class="mt-2 text-sm text-slate-600">Messages in coverage</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <span class="badge">Latest coverage</span>
-          <h2 class="section-heading mt-4">Announcements & stories</h2>
-          <p class="section-subtitle mt-3">Stay updated on product launches, partnerships, and market expansion.</p>
+    <!-- Mission Section -->
+    <section id="mission" class="py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Our Media Mission
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-600">
+            To connect journalists, analysts, and storytellers with the authentic voice of Voizag's innovation and impact.
+          </p>
         </div>
-        <a href="mailto:press@voizag.com" class="btn-secondary">Pitch Voizag</a>
-      </div>
-      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <article class="news-card fade-up">
-          <p class="text-xs uppercase tracking-[0.35em] text-blue-500">April 8, 2025</p>
-          <h3 class="text-xl font-semibold text-slate-900">Voizag launches AI-led compliance assistant for regulated messaging.</h3>
-          <p class="text-sm text-slate-600">New policy engine automates DLT, 10DLC, and opt-in workflows across 40 countries, reducing onboarding time by 60%.</p>
-          <a href="#" class="text-sm font-semibold text-blue-600">Read release →</a>
-        </article>
-        <article class="news-card fade-up fade-delay-1">
-          <p class="text-xs uppercase tracking-[0.35em] text-blue-500">March 21, 2025</p>
-          <h3 class="text-xl font-semibold text-slate-900">Voizag expands to LATAM with new São Paulo command center.</h3>
-          <p class="text-sm text-slate-600">Dedicated regional routes and local compliance experts bring SLA-backed quality to the fastest-growing messaging market.</p>
-          <a href="#" class="text-sm font-semibold text-blue-600">Read release →</a>
-        </article>
-        <article class="news-card fade-up fade-delay-2">
-          <p class="text-xs uppercase tracking-[0.35em] text-blue-500">February 12, 2025</p>
-          <h3 class="text-xl font-semibold text-slate-900">Forrester recognises Voizag as a Leader in CPaaS Wave 2025.</h3>
-          <p class="text-sm text-slate-600">Voizag scores highest in innovation roadmap, customer satisfaction, and compliance support.</p>
-          <a href="#" class="text-sm font-semibold text-blue-600">Download analyst report →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="mx-auto mt-24 max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl border border-slate-200 bg-white/80 p-10 shadow-xl">
-        <div class="grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
-          <div>
-            <span class="badge">Press releases</span>
-            <h3 class="section-heading mt-4">Press timeline</h3>
-            <p class="section-subtitle mt-3">Browse the highlights from the past year.</p>
-            <div class="mt-8 space-y-6 border-l border-slate-200 pl-6 text-sm text-slate-600">
-              <div>
-                <p class="text-xs uppercase tracking-[0.35em] text-slate-500">January 2025</p>
-                <p class="mt-1 font-semibold text-slate-900">Voizag introduces real-time AI content scoring for campaigns.</p>
-                <a href="#" class="text-blue-600">View details →</a>
+        <div class="mx-auto mt-16 max-w-4xl">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div class="text-center">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18c0 .621-.504 1.125-1.125 1.125M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h.75" />
+                </svg>
               </div>
-              <div>
-                <p class="text-xs uppercase tracking-[0.35em] text-slate-500">November 2024</p>
-                <p class="mt-1 font-semibold text-slate-900">Voizag Connect draws 2,000+ attendees in Dubai.</p>
-                <a href="#" class="text-blue-600">Read recap →</a>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Transparency</h3>
+              <p class="mt-2 text-slate-600">Providing clear, accurate information about our technology, business, and impact.</p>
+            </div>
+            <div class="text-center">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
+                <svg class="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.588m0 0a3.996 3.996 0 10-5.996 0 3.996 3.996 0 005.996 0zm0 0c.352.233.706.55 1.016.927m-.94-3.198a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zM7.5 15.75a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                </svg>
               </div>
-              <div>
-                <p class="text-xs uppercase tracking-[0.35em] text-slate-500">July 2024</p>
-                <p class="mt-1 font-semibold text-slate-900">Voizag acquires NodeWave to accelerate voice automation.</p>
-                <a href="#" class="text-blue-600">View announcement →</a>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Accessibility</h3>
+              <p class="mt-2 text-slate-600">Making ourselves available to media with fast responses and comprehensive resources.</p>
+            </div>
+            <div class="text-center">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
+                <svg class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423L16.5 15.75l.394 1.183a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Innovation</h3>
+              <p class="mt-2 text-slate-600">Showcasing breakthrough stories that inspire and inform the industry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Timeline Section -->
+    <section class="bg-slate-50 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Our Media Journey
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-600">
+            Key milestones in our relationship with the media and industry recognition.
+          </p>
+        </div>
+        <div class="mx-auto mt-16 max-w-4xl">
+          <div class="space-y-8">
+            <div class="flex items-start">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                <span class="text-sm font-bold text-blue-600">2025</span>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-lg font-semibold text-slate-900">Forrester Wave Leader</h3>
+                <p class="mt-1 text-slate-600">Recognized as a Leader in CPaaS for the second consecutive year, highlighting our innovation in AI-powered communications.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
+                <span class="text-sm font-bold text-emerald-600">2024</span>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-lg font-semibold text-slate-900">LATAM Expansion Coverage</h3>
+                <p class="mt-1 text-slate-600">Major publications covered our São Paulo command center launch, reaching millions of readers across Latin America.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-100">
+                <span class="text-sm font-bold text-purple-600">2023</span>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-lg font-semibold text-slate-900">Industry Recognition</h3>
+                <p class="mt-1 text-slate-600">Featured in 120+ publications worldwide, from TechCrunch to The Wall Street Journal, establishing Voizag as a communications innovator.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100">
+                <span class="text-sm font-bold text-orange-600">2022</span>
+              </div>
+              <div class="ml-6">
+                <h3 class="text-lg font-semibold text-slate-900">Media Foundation</h3>
+                <p class="mt-1 text-slate-600">Established dedicated press office and media resources, committing to transparent communication with the industry.</p>
               </div>
             </div>
           </div>
-          <div class="glass-card h-full" id="kit">
-            <h3 class="text-2xl font-semibold text-slate-900">Media kit</h3>
-            <p class="mt-2 text-sm text-slate-600">Download official logos, product screenshots, brand guidelines, and executive portraits.</p>
-            <div class="mt-6 grid gap-4 sm:grid-cols-2">
-              <a href="public/images/voizag-brand-assets.zip" class="rounded-2xl border border-blue-200 bg-blue-50/70 p-4 text-center text-sm font-semibold text-blue-700">Brand assets (.zip)</a>
-              <a href="public/images/voizag-product-gallery.zip" class="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4 text-center text-sm font-semibold text-emerald-700">Product gallery (.zip)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Press Contacts
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-600">
+            Our leadership team is available for interviews, commentary, and expert insights.
+          </p>
+        </div>
+        <div class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="text-center">
+            <img class="mx-auto h-32 w-32 rounded-full object-cover" src="public/images/admin_panel.png" alt="Ananya Rao" />
+            <h3 class="mt-6 text-lg font-semibold text-slate-900">Ananya Rao</h3>
+            <p class="text-sm text-slate-600">CEO</p>
+            <p class="mt-2 text-sm text-slate-500">Company vision, global strategy, industry trends</p>
+            <a href="mailto:ananya@voizag.com" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-500">ananya@voizag.com</a>
+          </div>
+          <div class="text-center">
+            <img class="mx-auto h-32 w-32 rounded-full object-cover" src="public/images/api.png" alt="David Milton" />
+            <h3 class="mt-6 text-lg font-semibold text-slate-900">David Milton</h3>
+            <p class="text-sm text-slate-600">CTO</p>
+            <p class="mt-2 text-sm text-slate-500">Technology, AI, product innovation</p>
+            <a href="mailto:david@voizag.com" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-500">david@voizag.com</a>
+          </div>
+          <div class="text-center">
+            <img class="mx-auto h-32 w-32 rounded-full object-cover" src="public/images/promotion_partner.gif" alt="Priya D'Silva" />
+            <h3 class="mt-6 text-lg font-semibold text-slate-900">Priya D'Silva</h3>
+            <p class="text-sm text-slate-600">Chief Strategy Officer</p>
+            <p class="mt-2 text-sm text-slate-500">Partnerships, market expansion, regulatory affairs</p>
+            <a href="mailto:priya@voizag.com" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:text-blue-500">priya@voizag.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remote Culture Section -->
+    <section class="bg-slate-50 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Global Media Reach
+              </h2>
+              <p class="mt-6 text-lg leading-8 text-slate-600">
+                Our distributed team enables us to serve media inquiries across time zones with local expertise and rapid response times.
+              </p>
+              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-slate-600 lg:max-w-none">
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-slate-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd" />
+                    </svg>
+                    24/7 Coverage.
+                  </dt>
+                  <dd class="inline ml-2">Round-the-clock media support across global time zones.</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-slate-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                    </svg>
+                    Local Expertise.
+                  </dt>
+                  <dd class="inline ml-2">Regional specialists who understand local markets and languages.</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-slate-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                      <path fill-rule="evenodd" d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z" clip-rule="evenodd" />
+                    </svg>
+                    Rapid Response.
+                  </dt>
+                  <dd class="inline ml-2">Average response time under 2 hours for media inquiries.</dd>
+                </div>
+              </dl>
             </div>
-            <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600">
-              <p class="font-semibold text-slate-900">Need a custom quote or interview?</p>
-              <p>We can connect you with executives, customers, and analysts for your story.</p>
-              <a href="mailto:press@voizag.com" class="mt-3 inline-flex items-center text-blue-600">Email press@voizag.com →</a>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="w-full max-w-md">
+              <div class="aspect-square rounded-2xl bg-gradient-to-br from-blue-100 to-emerald-100 p-8">
+                <div class="flex h-full items-center justify-center">
+                  <svg class="h-32 w-32 text-blue-600" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9s-2.015-9-4.5-9m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9-4.5-9m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 2.84A9.004 9.004 0 0121 12c0 2.485-.97 4.746-2.54 6.407" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <span class="badge">Leadership voices</span>
-          <h2 class="section-heading mt-4">Executive spokespeople</h2>
-          <p class="section-subtitle mt-3">Direct access to leaders ready for interviews, panels, and commentary.</p>
-        </div>
-        <a href="mailto:press@voizag.com" class="btn-secondary">Request interview</a>
-      </div>
-      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <div class="glass-card fade-up">
-          <img src="public/images/brand_admin.gif" alt="CEO portrait" class="h-48 w-full rounded-2xl object-cover" />
-          <p class="text-sm uppercase tracking-[0.35em] text-slate-500">CEO</p>
-          <h3 class="text-xl font-semibold text-slate-900">Ananya Rao</h3>
-          <p class="text-sm text-slate-600">Topics: global CPaaS trends, network resilience, enterprise communications strategy.</p>
-        </div>
-        <div class="glass-card fade-up fade-delay-1">
-          <img src="public/images/billing_postpaid.gif" alt="CTO portrait" class="h-48 w-full rounded-2xl object-cover" />
-          <p class="text-sm uppercase tracking-[0.35em] text-slate-500">CTO</p>
-          <h3 class="text-xl font-semibold text-slate-900">David Milton</h3>
-          <p class="text-sm text-slate-600">Topics: AI in communications, compliance automation, developer experience.</p>
-        </div>
-        <div class="glass-card fade-up fade-delay-2">
-          <img src="public/images/promotion_partner.gif" alt="CSO portrait" class="h-48 w-full rounded-2xl object-cover" />
-          <p class="text-sm uppercase tracking-[0.35em] text-slate-500">Chief Strategy Officer</p>
-          <h3 class="text-xl font-semibold text-slate-900">Priya D’Silva</h3>
-          <p class="text-sm text-slate-600">Topics: market expansion, regulatory landscapes, partner ecosystems.</p>
+    <!-- DEI Section -->
+    <section class="py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center">
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Inclusive Storytelling
+              </h2>
+              <p class="mt-6 text-lg leading-8 text-slate-600">
+                We believe in diverse voices and perspectives in media coverage, ensuring our stories reach and resonate with all audiences.
+              </p>
+              <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-slate-600 lg:max-w-none">
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-slate-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.5 3.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM3 6.5A2.5 2.5 0 115.5 9 2.5 2.5 0 013 6.5zM11.5 9a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM16.5 13.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" clip-rule="evenodd" />
+                    </svg>
+                    Diverse Sources.
+                  </dt>
+                  <dd class="inline ml-2">Connecting journalists with spokespeople from varied backgrounds and experiences.</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-slate-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                      <path fill-rule="evenodd" d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z" clip-rule="evenodd" />
+                    </svg>
+                    Global Perspectives.
+                  </dt>
+                  <dd class="inline ml-2">Showcasing stories from our international presence and diverse customer base.</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-slate-900">
+                    <svg class="absolute left-1 top-1 h-5 w-5 text-emerald-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                    </svg>
+                    Authentic Voices.
+                  </dt>
+                  <dd class="inline ml-2">Sharing genuine stories from our team, customers, and community partners.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="w-full max-w-md">
+              <div class="aspect-square rounded-2xl bg-gradient-to-br from-emerald-100 to-purple-100 p-8">
+                <div class="flex h-full items-center justify-center">
+                  <svg class="h-32 w-32 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.588m0 0a3.996 3.996 0 10-5.996 0 3.996 3.996 0 005.996 0zm0 0c.352.233.706.55 1.016.927m-.94-3.198a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zM7.5 15.75a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto mt-24 max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl border border-slate-200 bg-white/80 p-10 shadow-xl">
-        <h3 class="text-2xl font-bold text-slate-900">Media resources</h3>
-        <div class="mt-6 grid gap-6 md:grid-cols-2">
-          <div class="rounded-2xl border border-slate-200 bg-white p-6">
-            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Fact sheet</p>
-            <ul class="mt-4 space-y-3 text-sm text-slate-600">
-              <li>• Operating in 46 countries with 14 carrier-grade PoPs.</li>
-              <li>• 27,000+ customers across finance, retail, and logistics.</li>
-              <li>• 9.4B messages processed monthly with 99.995% uptime.</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl border border-slate-200 bg-white p-6">
-            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Broadcast support</p>
-            <ul class="mt-4 space-y-3 text-sm text-slate-600">
-              <li>• Remote studio access and branded backdrops.</li>
-              <li>• Satellite uplink coordination on request.</li>
-              <li>• Rapid briefing notes with verified data points.</li>
-            </ul>
+    <!-- Community Impact Section -->
+    <section class="bg-slate-50 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Media Partnerships
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-600">
+            Building lasting relationships with journalists and publications to share our story authentically.
+          </p>
+        </div>
+        <div class="mx-auto mt-16 max-w-4xl">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-2xl bg-white p-8 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18c0 .621-.504 1.125-1.125 1.125M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h.75" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Exclusive Access</h3>
+              <p class="mt-2 text-slate-600">Providing journalists with early access to product announcements and executive interviews.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-8 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100">
+                <svg class="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.588m0 0a3.996 3.996 0 10-5.996 0 3.996 3.996 0 005.996 0zm0 0c.352.233.706.55 1.016.927m-.94-3.198a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zM7.5 15.75a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Industry Events</h3>
+              <p class="mt-2 text-slate-600">Participating in press conferences, roundtables, and industry conferences worldwide.</p>
+            </div>
+            <div class="rounded-2xl bg-white p-8 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
+                <svg class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423L16.5 15.75l.394 1.183a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Content Collaboration</h3>
+              <p class="mt-2 text-slate-600">Co-creating compelling content with media partners to reach wider audiences.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto mt-24 max-w-5xl px-4 sm:px-6 lg:px-8">
-      <div class="glass-card text-center">
-        <span class="badge">Work with us</span>
-        <h2 class="section-heading mt-4">Set up your interview or story in less than two hours.</h2>
-        <p class="section-subtitle mx-auto mt-3">Send your brief, deadline, and preferred spokespeople—we’ll coordinate availability and provide supporting materials.</p>
-        <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-          <a href="mailto:press@voizag.com" class="btn-primary">Email press@voizag.com</a>
-          <a href="media.html#kit" class="btn-ghost">Grab the media kit</a>
+    <!-- Latest News Section -->
+    <section id="news" class="py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Latest News
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-600">
+            Stay updated with our latest announcements, product launches, and industry insights.
+          </p>
         </div>
-        <p class="mt-4 text-xs text-slate-500">For urgent broadcast requests call <a href="tel:+18005550142" class="font-semibold text-slate-700">+1-800-555-0142</a>.</p>
+        <div class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-2 text-sm text-slate-500">
+              <span class="rounded bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">Product Update</span>
+              <time datetime="2024-01-15">Jan 15, 2024</time>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">
+              Voizag launches AI-powered voice analytics platform
+            </h3>
+            <p class="mt-2 text-slate-600">
+              New platform delivers real-time insights from customer conversations, helping businesses improve service quality.
+            </p>
+            <a href="#" class="mt-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
+              Read more →
+            </a>
+          </article>
+          <article class="rounded-2xl bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-2 text-sm text-slate-500">
+              <span class="rounded bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-800">Partnership</span>
+              <time datetime="2024-01-10">Jan 10, 2024</time>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">
+              Voizag partners with leading telecom providers
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Strategic alliance expands global reach and enhances connectivity solutions.
+            </p>
+            <a href="#" class="mt-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
+              Read more →
+            </a>
+          </article>
+          <article class="rounded-2xl bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-2 text-sm text-slate-500">
+              <span class="rounded bg-purple-100 px-2 py-1 text-xs font-medium text-purple-800">Award</span>
+              <time datetime="2024-01-05">Jan 5, 2024</time>
+            </div>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">
+              Voizag recognized as Best AI Innovation 2024
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Honored at the Global Tech Awards for groundbreaking work in conversational AI.
+            </p>
+            <a href="#" class="mt-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-500">
+              Read more →
+            </a>
+          </article>
+        </div>
+        <div class="mt-12 text-center">
+          <a href="#" class="rounded-md bg-slate-100 px-6 py-3 text-base font-semibold text-slate-700 hover:bg-slate-200">
+            View all news →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media Assets Section -->
+    <section id="assets" class="bg-slate-50 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Media Assets
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-600">
+            Download high-resolution logos, product screenshots, and executive headshots for your coverage.
+          </p>
+        </div>
+        <div class="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-2xl bg-white p-6 shadow-sm">
+            <div class="flex items-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-9 0V1m10 3V1m0 3l1 1v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5l1-1z"/>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-slate-900">Brand Guidelines</h3>
+                <p class="text-sm text-slate-600">Complete brand identity package</p>
+              </div>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+                Download PDF
+              </a>
+              <a href="#" class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                Download ZIP
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm">
+            <div class="flex items-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100">
+                <svg class="h-6 w-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-slate-900">Product Screenshots</h3>
+                <p class="text-sm text-slate-600">High-resolution interface images</p>
+              </div>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="inline-flex items-center rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700">
+                Download PNG
+              </a>
+              <a href="#" class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                Download JPG
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm">
+            <div class="flex items-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
+                <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-slate-900">Executive Headshots</h3>
+                <p class="text-sm text-slate-600">Professional photos of our leadership</p>
+              </div>
+            </div>
+            <div class="mt-4 flex gap-2">
+              <a href="#" class="inline-flex items-center rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700">
+                Download ZIP
+              </a>
+              <a href="#" class="inline-flex items-center rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                View Gallery
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hiring CTA Section -->
+    <section class="bg-slate-900 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Ready to tell our story?
+          </h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            Contact our media team for interviews, press releases, or any media-related inquiries. We're here to help you get the story right.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="mailto:press@voizag.com" class="rounded-md bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors">
+              Email press@voizag.com
+            </a>
+            <a href="tel:+18005550142" class="text-base font-semibold leading-6 text-slate-300 hover:text-white transition-colors">
+              Call +1-800-555-0142 <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
