@@ -485,6 +485,15 @@ body.nav-open {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
   color: #fff;
@@ -530,6 +539,13 @@ body.nav-open {
   min-width: 150px;
 }
 
+@media (max-width: 480px) {
+  .stat-pill {
+    min-width: auto;
+    padding: 0.8rem 1rem;
+  }
+}
+
 .stat-pill strong {
   font-size: 1.5rem;
 }
@@ -543,6 +559,12 @@ body.nav-open {
   backdrop-filter: blur(16px);
 }
 
+@media (max-width: 640px) {
+  .glass-card {
+    padding: 1.5rem;
+  }
+}
+
 .feature-card {
   position: relative;
   border-radius: 1.5rem;
@@ -553,6 +575,12 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .feature-card {
+    padding: 1.5rem;
+  }
 }
 
 .feature-card .icon {
@@ -571,6 +599,12 @@ body.nav-open {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--brand-dark);
+}
+
+@media (max-width: 640px) {
+  .section-heading {
+    font-size: 1.8rem;
+  }
 }
 
 .section-subtitle {
