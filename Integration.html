@@ -13,41 +13,43 @@
   <div id="navbar"></div>
 
   <main>
-    <section class="relative overflow-hidden pb-20 pt-14 sm:pt-20">
-      <div class="absolute left-0 top-12 -z-10 h-72 w-72 rounded-full bg-indigo-100 blur-3xl"></div>
-      <div class="absolute right-0 top-24 -z-10 h-64 w-64 rounded-full bg-blue-100 blur-3xl"></div>
-      <div class="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:px-8">
-        <div class="space-y-6 fade-up">
-          <span class="badge">Integration hub</span>
+    <section class="relative overflow-hidden pb-20 pt-14 sm:pt-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <div class="absolute left-0 top-10 -z-10 h-72 w-72 rounded-full bg-blue-200 blur-3xl animate-pulse"></div>
+      <div class="absolute right-0 top-24 -z-10 h-64 w-64 rounded-full bg-indigo-200 blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-0 left-1/2 -z-10 h-48 w-48 rounded-full bg-emerald-100 blur-3xl animate-pulse"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-8 fade-up">
+          <span class="badge">Integration Hub</span>
           <h1 class="text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Build with Voizag’s APIs, SDKs, and event-driven automation in days—not months.
+            Voizag Integration Hub – APIs, SDKs & Developer Resources
           </h1>
-          <p class="max-w-2xl text-lg text-slate-600 lg:text-xl">
-            Ship compliant customer journeys using secure APIs, webhooks, and low-code connectors backed by real-time observability and sandbox environments.
+          <p class="max-w-3xl mx-auto text-lg text-slate-600 lg:text-xl">
+            Build compliant customer journeys with our secure APIs, SDKs, webhooks, and low-code connectors, backed by real-time observability and sandbox environments.
           </p>
-          <div class="flex flex-col gap-4 sm:flex-row">
-            <a href="#docs" class="btn-primary">Open documentation</a>
-            <a href="https://voizag.com/SMS_bot/login" class="btn-ghost">Launch developer console</a>
+          <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <a href="#docs" class="btn-primary">Open Documentation</a>
+            <a href="https://voizag.com/SMS_bot/login" class="btn-ghost">Launch Developer Console</a>
           </div>
-          <div class="flex flex-wrap gap-3 text-xs text-slate-500">
-            <span class="rounded-full bg-slate-100 px-3 py-1">REST & GraphQL APIs</span>
-            <span class="rounded-full bg-slate-100 px-3 py-1">SDKs for JS, Python, PHP, Java</span>
-            <span class="rounded-full bg-slate-100 px-3 py-1">Global webhooks & streaming</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm">
+              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">APIs</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900">REST & GraphQL</p>
+              <p class="text-xs text-slate-500">Secure endpoints</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm">
+              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">SDKs</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900">4 Languages</p>
+              <p class="text-xs text-slate-500">JS, Python, PHP, Java</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm">
+              <p class="text-xs uppercase tracking-[0.35em] text-slate-500">Webhooks</p>
+              <p class="mt-2 text-2xl font-bold text-slate-900">Global</p>
+              <p class="text-xs text-slate-500">Real-time streaming</p>
+            </div>
           </div>
         </div>
-        <div class="glass-card fade-up fade-delay-1">
-          <div class="code-block" aria-label="Voizag API code example">
-            <span class="code-comment">// Send an OTP with policy-aware routing</span>
-            <br />
-            <span class="code-key">import</span> { <span class="code-func">VoizagClient</span> } <span class="code-key">from</span> <span class="code-string">'@voizag/sdk'</span>;
-            <br /><br />
-            <span class="code-key">const</span> client = <span class="code-key">new</span> <span class="code-func">VoizagClient</span>({
-            <br />&nbsp;&nbsp;apiKey: <span class="code-string">process.env.VOIZAG_KEY</span>,
-            <br />&nbsp;&nbsp;region: <span class="code-string">'us-east'</span>,
-            <br />});
-            <br /><br />
-            <span class="code-key">await</span> client.messages.send({
-            <br />&nbsp;&nbsp;to: <span class="code-string">'+1-555-0101'</span>,
+      </div>
+    </section>
             <br />&nbsp;&nbsp;channel: <span class="code-string">'sms'</span>,
             <br />&nbsp;&nbsp;template: <span class="code-string">'otp_login'</span>,
             <br />&nbsp;&nbsp;metadata: {

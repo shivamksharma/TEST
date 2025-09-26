@@ -28,7 +28,7 @@ class ComponentLoader {
   async loadComponents() {
     try {
       await Promise.all([
-        this.loadComponent('navbar', 'navbar.html'),
+        this.loadComponent('navbar'), // Navbar HTML is now inline in the method
         this.loadComponent('footer', 'footer.html')
       ]);
 
@@ -44,7 +44,7 @@ class ComponentLoader {
   /**
    * Load a single component
    * @param {string} componentName - Name of the component (navbar/footer)
-   * @param {string} filePath - Path to the HTML file
+   * @param {string} filePath - Path to the HTML file (optional for navbar)
    */
   async loadComponent(componentName, filePath) {
     const placeholder = document.getElementById(componentName);
@@ -55,13 +55,19 @@ class ComponentLoader {
     }
 
     try {
-      const response = await fetch(filePath);
+      let html;
+      if (filePath) {
+        const response = await fetch(filePath);
 
-      if (!response.ok) {
-        throw new Error(`Failed to load ${filePath}: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${filePath}: ${response.status}`);
+        }
+
+        html = await response.text();
+      } else {
+        // Inline HTML for navbar
+        html = this.getNavbarHTML();
       }
-
-      const html = await response.text();
       placeholder.innerHTML = html;
       this.loadedComponents.add(componentName);
 
@@ -139,6 +145,13 @@ class ComponentLoader {
           document.body.classList.add('nav-open');
         }
       });
+
+      // Close mobile menu when clicking on links
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          closeMobileMenu();
+        });
+      });
     }
 
     // Desktop dropdown functionality
@@ -202,6 +215,99 @@ class ComponentLoader {
         closeMobileMenu();
       }
     });
+
+    // Close mobile menu on window resize (desktop)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        closeMobileMenu();
+      }
+    });
+  }
+
+  /**
+   * Get the navbar HTML content
+   * @returns {string} Navbar HTML
+   */
+  getNavbarHTML() {
+    return `
+  <nav id="global-nav" class="global-nav">
+    <div class="nav-shell">
+      <a href="index.html" class="nav-brand" aria-label="Voizag home">
+        <img src="public/images/voizag-logo.webp" alt="Voizag" class="nav-logo-image">
+      </a>
+      <div class="nav-main" role="menubar">
+        <a href="index.html" class="nav-link" role="menuitem">Home</a>
+        <div class="nav-dropdown" data-dropdown>
+          <button class="nav-link nav-link--trigger" type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false">
+            Solutions
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4.47 5.97a.75.75 0 0 1 1.06 0L8 8.44l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06Z" fill="currentColor" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="ai-contract.html" role="menuitem">
+              AI Services &amp; Compliance
+              <span>Guided automation programs</span>
+            </a>
+            <a href="b2b.html" role="menuitem">
+              B2B Partner Network
+              <span>White-label messaging &amp; voice</span>
+            </a>
+            <a href="Integration.html" role="menuitem">
+              Integration Hub
+              <span>API, SDK, and webhook fabric</span>
+            </a>
+          </div>
+        </div>
+        <a href="products.html" class="nav-link" role="menuitem">Products</a>
+        <a href="company.html" class="nav-link" role="menuitem">Company</a>
+        <a href="media.html" class="nav-link" role="menuitem">Media</a>
+        <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+18001234567" class="nav-cta-link">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5.14 2.82c.32-.6.96-.92 1.61-.81l2.18.36c.65.11 1.16.61 1.25 1.26l.26 1.84a1.6 1.6 0 0 1-.48 1.36l-1.07 1.02a8.48 8.48 0 0 0 3.83 3.83l1.02-1.07c.36-.38.89-.56 1.42-.48l1.84.26c.65.09 1.15.6 1.26 1.25l.36 2.18c.11.65-.21 1.29-.81 1.61l-1.64.87c-.52.28-1.13.32-1.68.12c-1.88-.68-3.62-1.79-5.08-3.25C6.93 11.4 5.82 9.66 5.14 7.78c-.2-.55-.16-1.16.12-1.68z" fill="currentColor" />
+          </svg>
+          <span>Global Support</span>
+        </a>
+        <a href="https://voizag.com/SMS_bot/login" class="nav-cta-button">Login</a>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M4 12h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M4 18h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="index.html" class="mobile-link">Home</a>
+      <div class="mobile-dropdown" data-mobile-dropdown>
+        <button class="mobile-dropdown-toggle" type="button" data-mobile-dropdown-toggle aria-expanded="false">
+          <span>Solutions</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M4.47 5.97a.75.75 0 0 1 1.06 0L8 8.44l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06Z" fill="currentColor" />
+          </svg>
+        </button>
+        <div class="mobile-dropdown-panel">
+          <a href="ai-contract.html" class="mobile-sublink">AI Services &amp; Compliance</a>
+          <a href="b2b.html" class="mobile-sublink">B2B Partner Network</a>
+          <a href="Integration.html" class="mobile-sublink">Integration Hub</a>
+        </div>
+      </div>
+      <a href="products.html" class="mobile-link">Products</a>
+      <a href="company.html" class="mobile-link">Company</a>
+      <a href="media.html" class="mobile-link">Media</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <div class="mobile-cta">
+        <a href="https://voizag.com/SMS_bot/login" class="nav-cta-button">Login</a>
+        <a href="contact.html" class="btn-ghost">Talk to sales</a>
+      </div>
+    </div>
+  </nav>
+    `;
   }
 
   /**

@@ -31,7 +31,7 @@
             <a href="products.html" class="btn-primary">Explore the platform</a>
             <a href="b2b.html" class="btn-ghost">Become a partner</a>
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="grid grid-cols-2 gap-4">
             <div class="stat-pill fade-up fade-delay-1">
               <strong>220+</strong>
               <span class="text-sm text-slate-500">Countries & territories covered</span>
@@ -43,6 +43,10 @@
             <div class="stat-pill fade-up fade-delay-3">
               <strong>24/7</strong>
               <span class="text-sm text-slate-500">Human support worldwide</span>
+            </div>
+            <div class="stat-pill fade-up fade-delay-4">
+              <strong>500+</strong>
+              <span class="text-sm text-slate-500">Integrations available</span>
             </div>
           </div>
         </div>
@@ -81,12 +85,13 @@
     <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="rounded-3xl border border-slate-200/60 bg-white/70 px-6 py-7 shadow-xl sm:px-10">
         <p class="text-center text-xs font-semibold uppercase tracking-[0.4em] text-slate-500">Trusted by modern product teams</p>
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-80">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="h-8" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="h-8" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Atlassian-logo.svg" alt="Atlassian" class="h-8" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Oracle_logo.svg" alt="Oracle" class="h-8" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Meta_Platforms_Logo.svg" alt="Meta" class="h-8" />
+        <div class="mt-6 flex items-center justify-center gap-8 opacity-80 slide-in-horizontal">
+          <img src="public/images/companies_logos/MSFT.svg" alt="Microsoft" class="h-8" />
+          <img src="public/images/companies_logos/IBM.svg" alt="IBM" class="h-8" />
+          <img src="public/images/companies_logos/TEAM.svg" alt="Atlassian" class="h-8" />
+          <img src="public/images/companies_logos/META.svg" alt="Meta" class="h-8" />
+          <img src="public/images/companies_logos/GOOG.svg" alt="Google" class="h-8" />
+          <img src="public/images/companies_logos/AMZN.svg" alt="Amazon" class="h-8" />
         </div>
       </div>
     </section>
@@ -100,91 +105,132 @@
             White-label frontends, programmable APIs, robust compliance tooling, and real-time analytics—built for teams who need a unified customer communications fabric.
           </p>
         </div>
-        <a href="contact.html" class="btn-secondary">Book a walkthrough</a>
       </div>
       <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <article class="feature-card fade-up">
           <div class="icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2h2a2 2 0 0 1 2 2v5.5A3.5 3.5 0 0 1 16.5 20H9a5 5 0 0 1-5-5z" opacity="0.3"/><path d="M9 4a3 3 0 0 0-3 3v8a5 5 0 0 0 5 5h7.5A3.5 3.5 0 0 0 22 16.5V11a2 2 0 0 0-2-2h-2V7a3 3 0 0 0-3-3z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-.96 0-1.75-.79-1.75-1.75s.79-1.75 1.75-1.75 1.75.79 1.75 1.75-.79 1.75-1.75 1.75zm1.05-4.63c-.59.59-1.53.59-2.12 0-.59-.59-.59-1.53 0-2.12L10.88 9c.59-.59 1.53-.59 2.12 0 .59.59.59 1.53 0 2.12l-1.05 1.05z"/></svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Fully branded portals</h3>
+          <h3 class="text-xl font-semibold text-slate-900">24/7 Expert Support</h3>
           <p class="text-slate-600">
-            Launch client and reseller portals under your brand. Control themes, dashboards, billing, and messaging journeys without touching core code.
+            Day or night, get answers and help from real people. No bots—just experienced Voizag professionals ready to solve challenges fast.
           </p>
           <ul class="space-y-2 text-sm text-slate-500">
-            <li>• Custom domains, logins, and roles</li>
-            <li>• Multi-tenancy with granular access</li>
-            <li>• Embedded analytics and billing center</li>
+            <li>• 24/7 availability</li>
+            <li>• Human experts</li>
+            <li>• Fast resolution</li>
           </ul>
         </article>
         <article class="feature-card fade-up fade-delay-1">
           <div class="icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h4v4H4z" opacity="0.3"/><path d="M10 4h8a2 2 0 0 1 2 2v4h-4a2 2 0 0 0-2 2v4h-4a2 2 0 0 1-2-2z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Programmable orchestration</h3>
+          <h3 class="text-xl font-semibold text-slate-900">Enterprise Compliance</h3>
           <p class="text-slate-600">
-            API-first architecture with SDKs, webhooks, and workflow automation. Deliver campaigns, OTPs, conversational flows, and event-based triggers instantly.
+            Your data is secure and compliant, with infrastructure in Europe, the US, and Asia—fully GDPR, SOC2, and ISO certified.
           </p>
           <ul class="space-y-2 text-sm text-slate-500">
-            <li>• REST, GraphQL, SMPP, SIP, WhatsApp API</li>
-            <li>• AI copilots for copy, routing, and QA</li>
-            <li>• Sandbox, rate control, retry strategies</li>
+            <li>• Secure and compliant data</li>
+            <li>• Global infrastructure</li>
+            <li>• Certifications: GDPR, SOC2, ISO</li>
           </ul>
         </article>
         <article class="feature-card fade-up fade-delay-2">
           <div class="icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 4h14v4H5z" opacity="0.3"/><path d="M19 4h-3l-2 4h5V6a2 2 0 0 0-2-2zM7 4H5a2 2 0 0 0-2 2v2h5zm10 12h-4l-2 4h6a2 2 0 0 0 2-2v-2zm-8 0H3v2a2 2 0 0 0 2 2h3z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 14l5-5 5 5z"/></svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Compliance & intelligence</h3>
+          <h3 class="text-xl font-semibold text-slate-900">On-Demand Scalability</h3>
           <p class="text-slate-600">
-            Trust the rails. Automated DLT, 10DLC, GDPR, SOC2 controls, plus anomaly detection, delivery scoring, and fraud protection baked in.
+            Expand or reduce your usage instantly—no minimum commitment, no hidden limits. Voizag scales as your business grows.
           </p>
           <ul class="space-y-2 text-sm text-slate-500">
-            <li>• Global number registration & KYC</li>
-            <li>• Consent, opt-out, and policy tooling</li>
-            <li>• Audit-ready logs with retention policies</li>
+            <li>• Instant scaling</li>
+            <li>• No minimum commitment</li>
+            <li>• No hidden limits</li>
           </ul>
         </article>
-        <article class="feature-card fade-up">
+        <article class="feature-card fade-up fade-delay-3">
           <div class="icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20a8 8 0 1 0-8-8" opacity="0.3"/><path d="M12 4v8l5 3" /></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 4h4v4h-4z" opacity="0.3"/><path d="M10 8h4v12h-4z"/></svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Real-time observability</h3>
+          <h3 class="text-xl font-semibold text-slate-900">Hassle-Free Integration</h3>
           <p class="text-slate-600">
-            Unified dashboards for deliveries, conversions, spend, and uptime. Stream data to your lakehouse or BI tools with ease.
+            Switching is easy: our solutions team handles migration, onboarding, and integration with zero disruption.
           </p>
           <ul class="space-y-2 text-sm text-slate-500">
-            <li>• Cross-channel analytics & cohorting</li>
-            <li>• Alerts, anomaly detection, SLA tracking</li>
-            <li>• Pre-built connectors for Snowflake, BigQuery</li>
+            <li>• Easy migration</li>
+            <li>• Team handles onboarding</li>
+            <li>• Zero disruption</li>
           </ul>
         </article>
-        <article class="feature-card fade-up fade-delay-1">
+        <article class="feature-card fade-up fade-delay-4">
           <div class="icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 16a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4" opacity="0.3"/><path d="M12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" /></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" opacity="0.3"/><path d="M12 7l-2 4h4z"/></svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Customer lifecycle journeys</h3>
+          <h3 class="text-xl font-semibold text-slate-900">Proven Uptime</h3>
           <p class="text-slate-600">
-            Visual builders for onboarding, retention, and support cadences. Segment audiences, experiment, and personalise at every touchpoint.
+            99.99% uptime is our standard. With proactive monitoring and world-class infrastructure, your communications are always on.
           </p>
           <ul class="space-y-2 text-sm text-slate-500">
-            <li>• Drag-and-drop workflow canvas</li>
-            <li>• Conditional logic, segments, and A/B</li>
-            <li>• Native CRM and billing sync</li>
+            <li>• 99.99% uptime</li>
+            <li>• Proactive monitoring</li>
+            <li>• World-class infrastructure</li>
           </ul>
         </article>
-        <article class="feature-card fade-up fade-delay-2">
+        <article class="feature-card fade-up fade-delay-5">
           <div class="icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 9l10 6 10-6-10-6z" opacity="0.3"/><path d="M4 17v-7l8 4.5 8-4.5v7l-8 4.5z" /></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 4a3 3 0 0 0-3 3v8a5 5 0 0 0 5 5h7.5A3.5 3.5 0 0 0 22 16.5V11a2 2 0 0 0-2-2h-2V7a3 3 0 0 0-3-3z" opacity="0.3"/><path d="M4 7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2h2a2 2 0 0 1 2 2v5.5A3.5 3.5 0 0 1 16.5 20H9a5 5 0 0 1-5-5z"/></svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900">Revenue-ready monetisation</h3>
+          <h3 class="text-xl font-semibold text-slate-900">Developer-First Platform</h3>
           <p class="text-slate-600">
-            Tiered pricing, credit wallets, invoicing, and tax-compliant billing built for resellers, agencies, and SaaS platforms.
+            Powerful APIs, a live sandbox, and real-time webhooks make automation and integration seamless for your tech team.
           </p>
           <ul class="space-y-2 text-sm text-slate-500">
-            <li>• Postpaid & prepaid controls</li>
-            <li>• GST, VAT, and regional tax engines</li>
-            <li>• Usage alerts and automated collections</li>
+            <li>• Powerful APIs</li>
+            <li>• Live sandbox</li>
+            <li>• Real-time webhooks</li>
+          </ul>
+        </article>
+        <article class="feature-card fade-up fade-delay-6">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2v4" opacity="0.3"/><path d="M12 6v4"/><path d="M12 10v4"/><path d="M12 14v4"/><path d="M12 18v4"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900">Transparent Pricing</h3>
+          <p class="text-slate-600">
+            Simple, predictable rates. No hidden fees, no complex contracts—just clarity and fairness as you scale globally.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li>• Simple rates</li>
+            <li>• No hidden fees</li>
+            <li>• Predictable pricing</li>
+          </ul>
+        </article>
+        <article class="feature-card fade-up fade-delay-7">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900">Dedicated Account Manager</h3>
+          <p class="text-slate-600">
+            Every partner gets a dedicated Voizag contact for strategic advice, priority service, and proactive support.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li>• Dedicated contact</li>
+            <li>• Strategic advice</li>
+            <li>• Priority service</li>
+          </ul>
+        </article>
+        <article class="feature-card fade-up fade-delay-8">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900">Instant Global Reach</h3>
+          <p class="text-slate-600">
+            Launch campaigns and connect worldwide instantly with Voizag’s network covering 220+ countries.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-500">
+            <li>• Instant global launch</li>
+            <li>• 220+ countries covered</li>
+            <li>• Worldwide connectivity</li>
           </ul>
         </article>
       </div>
